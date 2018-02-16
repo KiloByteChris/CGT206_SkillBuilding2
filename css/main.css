@@ -29,6 +29,7 @@ header {
     background-color: #3892A0;
     font-size: 2.5em;
     color : #FFF;
+    border-bottom: 1px solid #000;
 }
 
 h1 {
@@ -39,6 +40,7 @@ h1 {
 nav {
     height: 40px;
     background-color: #8EC2D2; 
+    border-bottom: 1px solid #000;
 }
 
 a {
@@ -46,7 +48,10 @@ a {
 }
 
 .navList {
+    position: relative;
     display: none;
+    clear: both;
+    z-index: 99;
 }
 
 .navLink {
@@ -80,22 +85,72 @@ a {
     float: right;
 }
 
+footer {
+    clear: both;
+    z-index: 1;
+    border-top: 1px solid #000;
+}
+
+footer p {
+    margin: 10px 0 0 10px;
+}
+
 /*-------------------------------------------------------------------------------
 -----------------------------SMALL MOBILE CSS------------------------------------
 -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 400px) and (max-width: 599px) {
+    #wrapper {
+    max-width: 599px;
+    width: 100%; 
+    }
+    
+    .navLink {
+        max-width: 599px;
+        width: 100%;
+    }
 }
 
 /*-------------------------------------------------------------------------------
 -----------------------------LARGE MOBILE CSS------------------------------------
 -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 960px) {
+    #wrapper {
+    max-width: 960px;
+    width: 100%; 
+    }
+    
+    .navLink {
+        max-width: 960px;
+        width: 100%;
+    }
 }
 
 /*-----------------------------------------------------------------------
 -----------------------------TABLET CSS----------------------------------
 -------------------------------------------------------------------------*/
 @media only screen and (min-width: 960px) and (max-width: 1280px) {
+    #wrapper {
+        max-width: 1280px;
+        width: 100%; 
+    }
+    
+    .burger {
+        display: none;
+    }
+    
+    .navList {
+        display: inline;
+        margin: 0 auto;
+        clear: both;
+        width: 100%;
+    }
+    
+    .navLink {
+        font-size: 1.5em;
+        display: inline;
+        border: none;
+        margin: 0 auto;
+    }
 }
 
 /*------------------------------------------------------------------------
